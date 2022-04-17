@@ -1,0 +1,163 @@
+NOTES LA3
+
+Scanner leitor = new Scanner(System.in);
+
+int idade = leitor.nextInt();
+float cotacaoDolar = leitor.nextFloat();
+double cotacaoEuro = leitor.nextDouble();
+String nome = leitor.nextLine();
+String codigoRua = leitor.next();
+
+next lê uma palavra, nextLine() lê uma frase inteira/até que a pessoa pressione o enter
+
+### modificadores de acesso: OK
+
+### getters e setters: OK
+•Interessante usar validações nos getters e setters p/ evitar manipulações indesejadas
+
+### classes: ok
+
+### herença: ok
+
+### Interfaces Gráficas:
+**file>new:JFrame Form
+•Estilo drag em drop
+•Usar aba properties p/ manipulação dos componentes
+•JOptionPane.showMessageDialog(rootPane, "Seja bem vindo!")
+•Usar árvore de componentes para melhor manipulação e edição
+
+**Responsividade no NetBeans:
+•Anchor
+•Resizing
+•Edit Layout Space
+
+Tela Todo App:
+1. Add panel
+2. Change bg color
+3. Add JLabel
+4. Change Jlabel font, color, text and horizontal alignment properties.
+5. Define icon to the label: add icon on the properties tab
+6. add a panel to the center
+7. set added panel gb to white
+8. add welcome label
+9. add login label
+10. add pw label
+11. add button
+12. add forgot pw label
+13. set the properties for the added components
+16. set anchors and resizable opts
+
+
+##### Projeto do Curso:
+
+1. Iniciando um Projeto
+1.1. Definição de um projeto básico
+1.1.1. Requisitos do projeto
+1.1.2. Regras de negócio
+1.1.3. Definição da tecnologia
+
+Definições:
+
+Todo App
+
+Descrição: Aplicação para o gerenciamento de projetos e as tarefas envolvidas nesses projetos.
+
+Objetivo: Resolver a organização das tarefas de um ou mais projetos.
+
+Entidades: 
+
+• Projeto;
+  - Nome
+  - Descrição
+  - Data de Criação
+  - Data de Atualização
+• Tarefa;
+  - Nome
+  - Descrição
+  - Realizada (Sim/Não)
+  - Observações
+  - Prazo
+  - Data de Criação
+  - Data de Atualização
+
+Requisitos funcionais:
+
+• Permitir criar o Projetos;
+• Permitir alterar o Projeto;
+• Permitir deletar o Projeto;
+• Permitir criar a Tarefa;
+• Permitir alterar a Tarefa;
+• Permitir deletar a Tarefa;
+
+Regras de negócio:
+
+• Não irá conter um sistema de login
+• Não haverá o conceito de usuário
+• Toda tarefa deve pertencer a um projeto
+
+Tecnologias utilizadas:
+
+• Java
+• MySql
+
+Melhorias:
+// Não podem haver tags repetidas numa mesma tarefa
+// Deve ser possível filtrar as tarefas por tag
+
+Tools to help design:
+
+• Ferramentas de prototipagem de tela
+• Paleta de cores
+• flaticon (ícones)
+• icons8
+• shutterstock (images)
+
+
+#### MVC Project 
+
+1. click on Source Packages (java)
+2. New > Java Package (x3)
+3. name the packages: model, view, controller
+
+Models:
+• Project
+• Task
+
+Views:  
+•
+•
+•
+
+Controllers:  
+•
+•
+
+util package:
+• ConnectionFactory (responsible for creating a db connection and respond to a part of the code where is needed to do a select, an update, etc...)
+// the static keyword allows us to use the method without creating an instance of the class
+//Connection means that the method returns a Connection
+* public static Connection getConnection() {
+	
+}
+
+*on the build.gradel dependencies {} type:
+compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
+
+
+Steps to Complete the Project:
+• DB creation (OK)
+• Model Classes (OK)
+• DB Connection (OK)
+• Controller classes (DB access) ()
+• GUI ()
+ - Main Screen ()
+   - CellRederer Deadline ()
+   - CellRederer Edit and Delete ()
+ - Project Creation Screen ()
+ - Task Creation Screen ()
+• Events ()
+ - Validations ()
+• Final adjustments ()
+• App testing () 
+
+
