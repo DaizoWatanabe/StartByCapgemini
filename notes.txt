@@ -129,8 +129,8 @@ Views:
 •
 
 Controllers:  
-•
-•
+•TaskController
+•ProjectController
 
 util package:
 • ConnectionFactory (responsible for creating a db connection and respond to a part of the code where is needed to do a select, an update, etc...)
@@ -142,6 +142,25 @@ util package:
 
 *on the build.gradel dependencies {} type:
 compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
+
+
+TaskController Creation Steps:
+1. Definition of methods
+save
+update
+removeById
+getAll
+2. In each method:
+define string
+define connection
+define statement
+try
+getConnection
+prepare query
+set values
+execute statement
+catch
+finally
 
 
 Steps to Complete the Project:

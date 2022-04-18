@@ -6,6 +6,7 @@ package model;
 
 import java.util.Date;
 
+
 /**
  *
  * @author daizo.watanabe
@@ -24,6 +25,11 @@ public class Project {
         this.description = description;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
+    }
+
+    public Project() {
+        this.createdAt = new Date();
+        this.updatedAt = new Date();
     }
 
     public int getId() {
@@ -71,5 +77,4 @@ public class Project {
         return "Project{" + "id=" + id + ", name=" + name + ", description=" + description + ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + '}';
     }
 
-    
 }
