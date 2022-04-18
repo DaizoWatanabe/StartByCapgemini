@@ -113,7 +113,7 @@ Tools to help design:
 • shutterstock (images)
 
 
-#### MVC Project 
+### MVC Project 
 
 1. click on Source Packages (java)
 2. New > Java Package (x3)
@@ -124,9 +124,9 @@ Models:
 • Task
 
 Views:  
-•
-•
-•
+• MainScreen
+• ProjectDialogScreen
+• TaskDialogScreen
 
 Controllers:  
 •TaskController
@@ -146,21 +146,26 @@ compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
 
 TaskController Creation Steps:
 1. Definition of methods
-save
-update
-removeById
-getAll
+• save
+• update
+• removeById
+• getAll
 2. In each method:
-define string
-define connection
-define statement
-try
-getConnection
-prepare query
-set values
-execute statement
-catch
-finally
+• define string
+• define connection
+• define statement
+• try{
+• getConnection
+• prepare query
+• set values
+• execute statement
+• }catch
+• }finally
+
+Views:
+• Use jFrames and Dialog screens
+• on the MainScreen view code switch from "Nimbus" to "Java swing" on the main()
+
 
 
 Steps to Complete the Project:
