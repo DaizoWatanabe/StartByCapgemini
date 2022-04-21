@@ -20,11 +20,11 @@ next lê uma palavra, nextLine() lê uma frase inteira/até que a pessoa pressio
 ### herença: ok
 
 ### Interfaces Gráficas:
-**file>new:JFrame Form
-•Estilo drag em drop
-•Usar aba properties p/ manipulação dos componentes
-•JOptionPane.showMessageDialog(rootPane, "Seja bem vindo!")
-•Usar árvore de componentes para melhor manipulação e edição
+•file>new:JFrame Form
+-Estilo drag and drop
+-Usar aba properties p/ manipulação dos componentes
+-JOptionPane.showMessageDialog(rootPane, "Seja bem vindo!")
+-Usar árvore de componentes para melhor manipulação e edição
 
 **Responsividade no NetBeans:
 •Anchor
@@ -82,7 +82,7 @@ Entidades:
 
 Requisitos funcionais:
 
-• Permitir criar o Projetos;
+• Permitir criar o Projeto;
 • Permitir alterar o Projeto;
 • Permitir deletar o Projeto;
 • Permitir criar a Tarefa;
@@ -144,7 +144,7 @@ util package:
 compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
 
 
-TaskController Creation Steps:
+TaskController | Creation Steps:
 1. Definition of methods
 • save
 • update
@@ -166,19 +166,37 @@ Views:
 • Use jFrames and Dialog screens
 • on the MainScreen view code switch from "Nimbus" to "Java swing" on the main()
 
+jFrames config notes:
+•components>events>(name of the event) to set event method
+•set events to open windows
+•set event methods to execute other methods on windowClose:
+exemple:
+projectDialogScreen.addWindowListener(new WindowAdapter() {
+            public void windowClosed(WindowEvent e) {
+                loadProjects();
+            }
+        });
+
+
+Create method loadProjects() to execute the controller.getAll() method
+loop thru the list and display it on the project list panel.
+
+
+
+
 
 
 Steps to Complete the Project:
 • DB creation (OK)
 • Model Classes (OK)
 • DB Connection (OK)
-• Controller classes (DB access) ()
+• Controller classes (DB access) (OK)
 • GUI ()
  - Main Screen ()
    - CellRederer Deadline ()
    - CellRederer Edit and Delete ()
- - Project Creation Screen ()
- - Task Creation Screen ()
+ - Project Creation Screen (OK)
+ - Task Creation Screen (OK)
 • Events ()
  - Validations ()
 • Final adjustments ()
